@@ -33,10 +33,13 @@
             img.src = 'assets/logo4.png';
         });
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
-        body { margin: 0; overflow-x: hidden; background: #000; }
-        canvas { display: block; }
+        body { 
+            margin: 0; 
+            overflow-x: hidden; 
+            background: url('assets/contact back.png') no-repeat center center fixed;
+            background-size: cover;
+        }
     </style>
 <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -46,7 +49,12 @@
         .nav-link { position: relative; display: inline-block; padding-bottom: 2px; }
         .nav-link::after { content: ""; position: absolute; left: 0; bottom: -4px; height: 2px; width: 0; background: linear-gradient(90deg, #94a3b8, #ffffff); transition: width .25s ease; border-radius: 2px; }
         .nav-link:hover::after { width: 100%; }
-        .content-container { position: relative; z-index: 10; min-height: 100vh; }
+        .content-container { 
+            position: relative; 
+            z-index: 10; 
+            min-height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+        }
         .card-hover { transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease; }
         .card-hover:hover { transform: translateY(-6px); border-color: rgba(99,102,241,0.5); background: rgba(255,255,255,0.08); box-shadow: 0 12px 30px rgba(99,102,241,0.15); }
     </style>
@@ -416,121 +424,6 @@
                 }
             });
         }
-    </script>
-    <script>
-        // Scene setup
-        const scene = new THREE.Scene();
-        const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
-        const renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.domElement.style.position = 'fixed';
-        renderer.domElement.style.inset = '0';
-        renderer.domElement.style.zIndex = '0';
-        renderer.domElement.style.pointerEvents = 'none';
-        document.body.prepend(renderer.domElement);
-
-        // Shader material
-        const material = new THREE.ShaderMaterial({
-            uniforms: {
-                iTime: { value: 0 },
-                iResolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) }
-            },
-            vertexShader: `
-                void main() {
-                    gl_Position = vec4(position, 1.0);
-                }
-            `,
-            fragmentShader: `
-                uniform float iTime;
-                uniform vec2 iResolution;
-
-                #define NUM_OCTAVES 3
-
-                float rand(vec2 n) { 
-                    return fract(sin(dot(n, vec2(12.9898, 4.1414))) * 43758.5453);
-                }
-
-                float noise(vec2 p){
-                    vec2 ip = floor(p);
-                    vec2 u = fract(p);
-                    u = u*u*(3.0-2.0*u);
-                    
-                    float res = mix(
-                        mix(rand(ip),rand(ip+vec2(1.0,0.0)),u.x),
-                        mix(rand(ip+vec2(0.0,1.0)),rand(ip+vec2(1.0,1.0)),u.x),u.y);
-                    return res*res;
-                }
-
-                float fbm(vec2 x) {
-                    float v = 0.0;
-                    float a = 0.3;
-                    vec2 shift = vec2(100);    
-                    mat2 rot = mat2(cos(0.5), sin(0.5), -sin(0.5), cos(0.50));
-                    for (int i = 0; i < NUM_OCTAVES; ++i) {
-                        v += a * noise(x);
-                        x = rot * x * 2.0 + shift;
-                        a *= 0.4;
-                    }
-                    return v;
-                }
-
-                void main() {
-                    vec2 shake = vec2(sin(iTime * 1.2) * 0.005, cos(iTime * 2.1) * 0.005);
-                    
-                    vec2 p = ((gl_FragCoord.xy + shake * iResolution.xy) - iResolution.xy * 0.5) / iResolution.y * mat2(6.0, -4.0, 4.0, 6.0);
-                    vec2 v;
-                    vec4 o = vec4(0.0);
-                    
-                    float f = 2.0 + fbm(p + vec2(iTime * 5.0, 0.0)) * 0.5; 
-                    
-                    for(float i = 0.0; i++ < 35.0;)
-                    {
-                        v = p + cos(i * i + (iTime + p.x * 0.08) * 0.025 + i * vec2(13.0, 11.0)) * 3.5 + vec2(sin(iTime * 3.0 + i) * 0.003, cos(iTime * 3.5 - i) * 0.003);
-                        
-                        float tailNoise = fbm(v + vec2(iTime * 0.5, i)) * 0.3 * (1.0 - (i / 35.0)); 
-                        
-                        // Indigo/Blue/Cyan aurora colors
-                        vec4 auroraColors = vec4(
-                            0.1 + 0.3 * sin(i * 0.2 + iTime * 0.4),  // Red component (low for blue tones)
-                            0.3 + 0.5 * cos(i * 0.3 + iTime * 0.5),  // Green component
-                            0.7 + 0.3 * sin(i * 0.4 + iTime * 0.3),  // Blue component (dominant)
-                            1.0
-                        );
-                        
-                        vec4 currentContribution = auroraColors * exp(sin(i * i + iTime * 0.8)) / length(max(v, vec2(v.x * f * 0.015, v.y * 1.5)));
-                        
-                        // Much thinner comets
-                        float thinnessFactor = smoothstep(0.0, 1.0, i / 35.0) * 0.6; 
-                        o += currentContribution * (1.0 + tailNoise * 0.8) * thinnessFactor;
-                    }
-                    
-                    // 50% brighter - reduced divisor from 150.0 to 100.0
-                    o = tanh(pow(o / 100.0, vec4(1.6)));
-                    gl_FragColor = o * 1.5; // Additional brightness boost
-                }
-            `
-        });
-
-        // Create plane geometry
-        const geometry = new THREE.PlaneGeometry(2, 2);
-        const mesh = new THREE.Mesh(geometry, material);
-        scene.add(mesh);
-
-        // Animation loop
-        function animate() {
-            requestAnimationFrame(animate);
-            material.uniforms.iTime.value += 0.016;
-            renderer.render(scene, camera);
-        }
-
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            material.uniforms.iResolution.value.set(window.innerWidth, window.innerHeight);
-        });
-
-        animate();
     </script>
     <script>
         const yearEl = document.getElementById('year');

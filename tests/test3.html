@@ -3,36 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nivenza Connect</title>
-    <link rel="icon" type="image/png" href="assets/logo4.png">
-    <link rel="apple-touch-icon" href="assets/logo4.png">
-    <script>
-        // Create round favicon dynamically
-        window.addEventListener('load', function() {
-            const canvas = document.createElement('canvas');
-            const ctx = canvas.getContext('2d');
-            canvas.width = 32;
-            canvas.height = 32;
-            
-            const img = new Image();
-            img.onload = function() {
-                // Create circular clipping
-                ctx.beginPath();
-                ctx.arc(16, 16, 16, 0, 2 * Math.PI);
-                ctx.clip();
-                
-                // Draw the image
-                ctx.drawImage(img, 0, 0, 32, 32);
-                
-                // Update favicon
-                const link = document.querySelector('link[rel="icon"]');
-                if (link) {
-                    link.href = canvas.toDataURL();
-                }
-            };
-            img.src = 'assets/logo4.png';
-        });
-    </script>
+    <title>Aurora Comets</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
         body { margin: 0; overflow: hidden; background: #000; }
@@ -42,11 +13,9 @@
 </head>
 <body>
     <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; color: white; font-size: 3rem; font-weight: bold; text-align: center; text-shadow: 0 0 20px rgba(255,255,255,0.5);">
-        Coming Soon
+      
     </div>
-    <a href="index.html" style="position: fixed; bottom: 50px; left: 50%; transform: translateX(-50%); z-index: 1000; color: white; font-size: 1.2rem; font-weight: bold; text-decoration: none; padding: 12px 24px; border: 2px solid white; border-radius: 8px; transition: all 0.3s ease; text-shadow: 0 0 10px rgba(255,255,255,0.3);">
-        ← Back to Home
-    </a>
+   
     <script>
         // Scene setup
         const scene = new THREE.Scene();
