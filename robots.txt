@@ -1,0 +1,36 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://nivenza.com/sitemap.xml
+
+# Crawl delay (optional - be respectful to servers)
+Crawl-delay: 1
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Disallow test pages
+Disallow: /tests/
+
+# Allow all assets
+Allow: /assets/
+Allow: /marketing%20servies/
+
+# Allow all main pages
+Allow: /index.html
+Allow: /work.html
+Allow: /Company.html
+Allow: /Contact.html
+Allow: /getstart.html
+Allow: /case-study.html

@@ -1,9 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Work - Nivenza Connect</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>Our Work Portfolio - Nivenza | Digital Marketing & Web Development Projects | Case Studies</title>
+    <meta name="title" content="Our Work Portfolio - Nivenza | Digital Marketing & Web Development Projects | Case Studies">
+    <meta name="description" content="Explore Nivenza's impressive portfolio of digital marketing campaigns, web development projects, and technology solutions. View case studies and success stories from 50+ projects delivered with 95% client satisfaction.">
+    <meta name="keywords" content="portfolio, case studies, digital marketing projects, web development projects, technology solutions, client success stories, project examples, digital transformation projects">
+    <meta name="author" content="Nivenza Inc">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+    <meta name="theme-color" content="#000000">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nivenza.com/work.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nivenza.com/work.html">
+    <meta property="og:title" content="Our Work Portfolio - Nivenza | Digital Marketing & Web Development Projects">
+    <meta property="og:description" content="Explore Nivenza's impressive portfolio of digital marketing campaigns, web development projects, and technology solutions. View case studies and success stories.">
+    <meta property="og:image" content="https://nivenza.com/assets/logo-main.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Nivenza">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://nivenza.com/work.html">
+    <meta property="twitter:title" content="Our Work Portfolio - Nivenza | Digital Marketing & Web Development Projects">
+    <meta property="twitter:description" content="Explore Nivenza's impressive portfolio of digital marketing campaigns, web development projects, and technology solutions.">
+    <meta property="twitter:image" content="https://nivenza.com/assets/logo-main.png">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="geo.region" content="US">
+    <meta name="geo.placename" content="United States">
+    <meta name="geo.position" content="40.7128;-74.0060">
+    <meta name="ICBM" content="40.7128, -74.0060">
+    
+    <!-- Mobile App Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nivenza Work">
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
     <link rel="icon" type="image/png" href="assets/logo4.png">
     <link rel="apple-touch-icon" href="assets/logo4.png">
     <script>
@@ -424,7 +481,7 @@
                             <span class="text-sm text-gray-500">${project.year}</span>
                             <a href="case-study.html?id=${project.id}" class="text-blue-400 hover:text-blue-300 text-sm cursor-pointer">View Case Study →</a>
                         </div>
-                        ${project.url ? `<a href="${project.url}" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 text-sm cursor-pointer">Visit Project →</a>` : ''}
+
                     </div>
                 </div>
             `).join('');
@@ -439,6 +496,60 @@
     <script>
         const yearEl = document.getElementById('year');
         if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
+    </script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Our Work Portfolio",
+      "description": "Explore Nivenza's impressive portfolio of digital marketing campaigns, web development projects, and technology solutions.",
+      "url": "https://nivenza.com/work.html",
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "Project Portfolio",
+        "description": "Collection of successful digital marketing and web development projects",
+        "numberOfItems": 50,
+        "itemListElement": [
+          {
+            "@type": "CreativeWork",
+            "name": "TechMart Platform",
+            "description": "A modern e-commerce platform with advanced inventory management, real-time analytics, and seamless payment integration.",
+            "category": "E-commerce",
+            "technology": "React",
+            "year": "2024"
+          }
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Nivenza",
+        "url": "https://nivenza.com"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Nivenza",
+      "url": "https://nivenza.com",
+      "logo": "https://nivenza.com/assets/logo-main.png",
+      "description": "Leading digital marketing and technology solutions company",
+      "foundingDate": "2012",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US",
+        "addressRegion": "United States"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "availableLanguage": "English"
+      }
+    }
     </script>
 </body>
 </html>
