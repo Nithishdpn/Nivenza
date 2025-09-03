@@ -51,6 +51,16 @@
         .nav-link:hover::after { width: 100%; }
         .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
+        /* Desktop image subtle floating animation */
+        @keyframes floatY {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0); }
+        }
+        .float-y {
+            animation: floatY 6s ease-in-out infinite;
+            will-change: transform;
+        }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" />
@@ -106,6 +116,8 @@
         <div id="case-study-content" class="hidden">
             <!-- Hero Section -->
             <section class="container mx-auto px-6 pt-16 md:pt-24">
+                <!-- Mobile hero background (only on small screens) -->
+                <div id="mobile-hero" class="block md:hidden w-full h-48 rounded-xl border border-gray-800 mb-6 bg-cover bg-center"></div>
                 <div class="max-w-4xl mx-auto">
                     <div class="flex items-center gap-4 mb-6">
                         <a href="work.html" class="text-gray-400 hover:text-white transition-colors">
@@ -130,7 +142,7 @@
                             </div>
                             
                             <!-- Right side: Project image -->
-                            <div id="project-image-container" class="flex justify-center md:justify-end">
+                            <div id="project-image-container" class="hidden md:flex justify-center md:justify-end">
                                 <!-- Project image will be loaded dynamically -->
                             </div>
                         </div>
@@ -342,8 +354,14 @@
             const projectImageContainer = document.getElementById('project-image-container');
             if (projectData.image) {
                 projectImageContainer.innerHTML = `
-                    <img src="${projectData.image}" alt="${projectData.title}" class="w-full max-w-md h-auto object-cover rounded-xl border border-gray-700 shadow-lg">
+                    <img src="${projectData.image}" alt="${projectData.title}" class="w-full max-w-md h-auto object-cover rounded-xl border border-gray-700 shadow-lg float-y">
                 `;
+            }
+
+            // Set mobile hero background image
+            const mobileHero = document.getElementById('mobile-hero');
+            if (mobileHero && projectData.image) {
+                mobileHero.style.backgroundImage = `url('${projectData.image}')`;
             }
             
             // Update project links section (only URL now)
