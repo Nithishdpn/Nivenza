@@ -1,0 +1,178 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "TechMart Platform",
+      "category": "E-commerce",
+      "technology": "React",
+      "year": "2024",
+      "description": "A modern e-commerce platform with advanced inventory management, real-time analytics, and seamless payment integration.",
+      "image": "https://picsum.photos/600/400?random=1",
+      "url": "https://techmart-platform.com",
+      "icon": "fas fa-shopping-cart",
+      "gradient": "from-blue-500/20 to-purple-600/20",
+      "iconColor": "text-blue-400",
+      "tagColor": "bg-blue-500/20 text-blue-400",
+      "caseStudy": {
+        "overview": "TechMart Platform is a comprehensive e-commerce solution designed for modern retailers who need to scale their online presence while maintaining operational efficiency.",
+        "challenge": "The client needed a platform that could handle 10,000+ concurrent users, integrate with multiple payment gateways, and provide real-time inventory tracking across multiple warehouses.",
+        "solution": "We built a React-based SPA with Node.js backend, implementing microservices architecture for scalability, Redis for caching, and WebSocket connections for real-time updates.",
+        "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "WebSocket", "Stripe API", "AWS"],
+        "results": [
+          "50% increase in conversion rate",
+          "99.9% uptime achieved",
+          "Reduced page load time by 60%",
+          "Successfully handled Black Friday traffic spike"
+        ],
+        "duration": "6 months",
+        "teamSize": "8 developers",
+        "client": "TechMart Inc."
+      }
+    },
+    {
+      "id": 2,
+      "title": "WealthTracker Pro",
+      "category": "FinTech",
+      "technology": "Node.js",
+      "year": "2024",
+      "description": "Investment portfolio management system with AI-powered insights, risk assessment, and automated rebalancing.",
+      "image": "https://picsum.photos/600/400?random=2",
+      "url": "https://wealthtracker-pro.com",
+      "icon": "fas fa-chart-line",
+      "gradient": "from-green-500/20 to-teal-600/20",
+      "iconColor": "text-green-400",
+      "tagColor": "bg-green-500/20 text-green-400",
+      "caseStudy": {
+        "overview": "WealthTracker Pro is an AI-powered investment portfolio management platform that helps financial advisors and individual investors make data-driven decisions.",
+        "challenge": "The client required a system that could analyze market data in real-time, provide personalized investment recommendations, and ensure compliance with financial regulations.",
+        "solution": "We developed a Node.js application with Python microservices for AI/ML algorithms, real-time market data integration, and comprehensive compliance monitoring.",
+        "technologies": ["Node.js", "Python", "TensorFlow", "PostgreSQL", "Redis", "WebSocket", "Financial APIs"],
+        "results": [
+          "30% improvement in portfolio performance",
+          "Automated 80% of routine investment decisions",
+          "Reduced compliance review time by 70%",
+          "Successfully processed $2B+ in assets under management"
+        ],
+        "duration": "8 months",
+        "teamSize": "12 developers",
+        "client": "WealthTracker Financial"
+      }
+    },
+    {
+      "id": 3,
+      "title": "FitLife Tracker",
+      "category": "Mobile App",
+      "technology": "Flutter",
+      "year": "2023",
+      "description": "Cross-platform fitness app with workout planning, progress tracking, and social features for motivation.",
+      "image": "https://picsum.photos/600/400?random=3",
+      "url": "https://fitlife-tracker.app",
+      "icon": "fas fa-mobile-alt",
+      "gradient": "from-purple-500/20 to-pink-600/20",
+      "iconColor": "text-purple-400",
+      "tagColor": "bg-purple-500/20 text-purple-400",
+      "caseStudy": {
+        "overview": "FitLife Tracker is a comprehensive fitness application that helps users track workouts, monitor progress, and stay motivated through social features and gamification.",
+        "challenge": "The client wanted a cross-platform app that could work offline, sync data across devices, and integrate with wearable fitness devices.",
+        "solution": "We built a Flutter app with Firebase backend, implementing offline-first architecture, real-time synchronization, and comprehensive device integration.",
+        "technologies": ["Flutter", "Firebase", "Dart", "SQLite", "HealthKit", "Google Fit API", "AWS"],
+        "results": [
+          "500,000+ downloads in first 6 months",
+          "4.8/5 star rating on app stores",
+          "80% user retention after 30 days",
+          "Successfully integrated with 15+ fitness devices"
+        ],
+        "duration": "5 months",
+        "teamSize": "6 developers",
+        "client": "FitLife Technologies"
+      }
+    },
+    {
+      "id": 4,
+      "title": "CorpFlow Suite",
+      "category": "Enterprise",
+      "technology": "Java",
+      "year": "2023",
+      "description": "Enterprise resource planning system streamlining operations across manufacturing, logistics, and finance departments.",
+      "image": "https://picsum.photos/600/400?random=4",
+      "url": "https://corpflow-suite.com",
+      "icon": "fas fa-building",
+      "gradient": "from-orange-500/20 to-red-600/20",
+      "iconColor": "text-orange-400",
+      "tagColor": "bg-orange-500/20 text-orange-400",
+      "caseStudy": {
+        "overview": "CorpFlow Suite is an enterprise resource planning system that integrates manufacturing, logistics, and financial operations into a unified platform.",
+        "challenge": "The client needed to replace 15 legacy systems with a single integrated solution while maintaining business continuity and training 500+ users.",
+        "solution": "We developed a Java-based ERP system with microservices architecture, implementing gradual migration strategy and comprehensive user training programs.",
+        "technologies": ["Java", "Spring Boot", "Oracle Database", "Kubernetes", "Docker", "Angular", "Azure"],
+        "results": [
+          "25% reduction in operational costs",
+          "40% improvement in process efficiency",
+          "99.5% system uptime achieved",
+          "Successfully migrated 15 legacy systems"
+        ],
+        "duration": "18 months",
+        "teamSize": "20 developers",
+        "client": "Global Manufacturing Corp"
+      }
+    },
+    {
+      "id": 5,
+      "title": "LearnHub Academy",
+      "category": "EdTech",
+      "technology": "Vue.js",
+      "year": "2023",
+      "description": "Online learning platform with interactive courses, progress tracking, and AI-powered personalized recommendations.",
+      "image": "https://picsum.photos/600/400?random=5",
+      "url": "https://learnhub-academy.com",
+      "icon": "fas fa-graduation-cap",
+      "gradient": "from-teal-500/20 to-blue-600/20",
+      "iconColor": "text-teal-400",
+      "tagColor": "bg-teal-500/20 text-teal-400",
+      "caseStudy": {
+        "overview": "LearnHub Academy is an innovative online learning platform that uses AI to provide personalized learning experiences and track student progress.",
+        "challenge": "The client wanted a platform that could handle 100,000+ students, provide personalized learning paths, and support various content formats including video, interactive exercises, and assessments.",
+        "solution": "We built a Vue.js frontend with Python backend, implementing AI algorithms for personalization, content management system, and comprehensive analytics dashboard.",
+        "technologies": ["Vue.js", "Python", "Django", "PostgreSQL", "Redis", "TensorFlow", "AWS S3"],
+        "results": [
+          "120,000+ active students enrolled",
+          "35% improvement in learning outcomes",
+          "90% student satisfaction rate",
+          "Reduced course creation time by 50%"
+        ],
+        "duration": "7 months",
+        "teamSize": "10 developers",
+        "client": "LearnHub Education"
+      }
+    },
+    {
+      "id": 6,
+      "title": "HealthSync Pro",
+      "category": "Healthcare",
+      "technology": "Python",
+      "year": "2022",
+      "description": "Patient management system with telemedicine capabilities, appointment scheduling, and secure health records.",
+      "image": "https://picsum.photos/600/400?random=6",
+      "url": "https://healthsync-pro.com",
+      "icon": "fas fa-heartbeat",
+      "gradient": "from-pink-500/20 to-red-600/20",
+      "iconColor": "text-pink-400",
+      "tagColor": "bg-pink-500/20 text-pink-400",
+      "caseStudy": {
+        "overview": "HealthSync Pro is a comprehensive healthcare management system that streamlines patient care, appointment scheduling, and medical record management.",
+        "challenge": "The client needed a HIPAA-compliant system that could handle multiple clinics, integrate with existing medical devices, and provide secure telemedicine capabilities.",
+        "solution": "We developed a Python-based system with Django framework, implementing end-to-end encryption, HIPAA compliance features, and seamless integration with medical devices.",
+        "technologies": ["Python", "Django", "PostgreSQL", "Redis", "WebRTC", "HL7 FHIR", "AWS"],
+        "results": [
+          "HIPAA compliance certification achieved",
+          "50% reduction in appointment scheduling time",
+          "99.9% data security uptime",
+          "Successfully deployed across 25+ clinics"
+        ],
+        "duration": "10 months",
+        "teamSize": "15 developers",
+        "client": "HealthSync Medical Group"
+      }
+    }
+  ]
+}
