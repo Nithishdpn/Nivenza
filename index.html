@@ -107,9 +107,11 @@
     }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"></noscript>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Geist+Sans:wght@300&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Sans:wght@300&display=swap"></noscript>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
     
@@ -227,7 +229,7 @@
           <h1 class="text-5xl md:text-6xl lg:text-7xl font-light tracking-tighter mb-6 leading-tight"><span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">Streamline</span> your digital experience</h1>
           <p class="text-gray-300 text-xl md:text-2xl mb-8 max-w-2xl font-light tracking-wide">We offer a unique and personalized approach to Digital Strategy, Architecture & Solutions tailored to our client's business goals</p>
         <div class="flex flex-col sm:flex-row gap-4 mt-4">
-            <button class="bg-white text-black font-light rounded-md px-8 py-3 hover:bg-opacity-90 transition-all">Let's Talk</button>
+            <a href="Contact.html" class="bg-white text-black font-light rounded-md px-8 py-3 hover:bg-opacity-90 transition-all text-center">Let's Talk</a>
             <a href="#services" class="flex items-center text-gray-300 hover:text-white transition-colors py-3 px-2 group">Learn more<span class="material-symbols-outlined ml-1 group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
                 </div>
         </div>
@@ -239,37 +241,37 @@
         <div class="partner-carousel">
           <div class="partner-track">
             <div class="partner-group">
-              <div class="logo-item"><img src="assets/companies/ibm.png" alt="IBM" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/Infosys.png" alt="Infosys" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/cognizant.png" alt="Cognizant" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/hcl.png" alt="HCL" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/wipro.png" alt="Wipro" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/acc.png" alt="Accenture" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/tcs.png" alt="TCS" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/capgemini.png" alt="Capgemini" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/tech-mahindra.png" alt="Tech Mahindra" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/mphasis.png" alt="Mphasis" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/Microsoft.png" alt="Microsoft" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/aws.png" alt="AWS" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/hp.png" alt="HP" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/hitachi.png" alt="Hitachi" class="partner-logo"/></div>
+                        <div class="logo-item"><img src="assets/companies/ibm.png" alt="IBM company logo - Technology consulting partner" class="partner-logo" loading="lazy"/></div>
+          <div class="logo-item"><img src="assets/companies/Infosys.png" alt="Infosys company logo - Digital transformation partner" class="partner-logo" loading="lazy"/></div>
+          <div class="logo-item"><img src="assets/companies/cognizant.png" alt="Cognizant company logo - IT services partner" class="partner-logo" loading="lazy"/></div>
+          <div class="logo-item"><img src="assets/companies/hcl.png" alt="HCL company logo - Technology solutions partner" class="partner-logo" loading="lazy"/></div>
+          <div class="logo-item"><img src="assets/companies/wipro.png" alt="Wipro company logo - IT consulting partner" class="partner-logo" loading="lazy"/></div>
+          <div class="logo-item"><img src="assets/companies/acc.png" alt="Accenture company logo - Digital consulting partner" class="partner-logo" loading="lazy"/></div>
+          <div class="logo-item"><img src="assets/companies/tcs.png" alt="TCS company logo - IT services partner" class="partner-logo" loading="lazy"/></div>
+          <div class="logo-item"><img src="assets/companies/capgemini.png" alt="Capgemini company logo - Technology consulting partner" class="partner-logo" loading="lazy"/></div>
+          <div class="logo-item"><img src="assets/companies/tech-mahindra.png" alt="Tech Mahindra company logo - IT solutions partner" class="partner-logo" loading="lazy"/></div>
+          <div class="logo-item"><img src="assets/companies/mphasis.png" alt="Mphasis company logo - Digital services partner" class="partner-logo" loading="lazy"/></div>
+          <div class="logo-item"><img src="assets/companies/Microsoft.png" alt="Microsoft company logo - Technology platform partner" class="partner-logo" loading="lazy"/></div>
+          <div class="logo-item"><img src="assets/companies/aws.png" alt="AWS company logo - Cloud services partner" class="partner-logo" loading="lazy"/></div>
+          <div class="logo-item"><img src="assets/companies/hp.png" alt="HP company logo - Technology solutions partner" class="partner-logo" loading="lazy"/></div>
+          <div class="logo-item"><img src="assets/companies/hitachi.png" alt="Hitachi company logo - Technology innovation partner" class="partner-logo" loading="lazy"/></div>
         </div>
             <div class="partner-group" aria-hidden="true">
-              <div class="logo-item"><img src="assets/companies/ibm.png" alt="IBM company logo" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/Infosys.png" alt="Infosys company logo" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/cognizant.png" alt="Cognizant company logo" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/hcl.png" alt="HCL company logo" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/wipro.webp" alt="Wipro company logo" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/Accenture.png" alt="Accenture company logo" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/tcs.jpeg" alt="TCS company logo" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/capgemini.png" alt="Capgemini company logo" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/tech-mahindra.png" alt="Tech Mahindra company logo" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/mphasis.png" alt="Mphasis company logo" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/microsoft-1024x1024.png" alt="Microsoft company logo" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/aws-01-1024x1024.png" alt="AWS company logo" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/hp.png" alt="HP company logo" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/hitachi.png" alt="Hitachi company logo" class="partner-logo"/></div>
-              <div class="logo-item"><img src="assets/companies/Blusafe_logo.webp" alt="Blusafe company logo" class="partner-logo"/></div>
+              <div class="logo-item"><img src="assets/companies/ibm.png" alt="IBM company logo - Technology consulting partner" class="partner-logo" loading="lazy"/></div>
+              <div class="logo-item"><img src="assets/companies/Infosys.png" alt="Infosys company logo - Digital transformation partner" class="partner-logo" loading="lazy"/></div>
+              <div class="logo-item"><img src="assets/companies/cognizant.png" alt="Cognizant company logo - IT services partner" class="partner-logo" loading="lazy"/></div>
+              <div class="logo-item"><img src="assets/companies/hcl.png" alt="HCL company logo - Technology solutions partner" class="partner-logo" loading="lazy"/></div>
+              <div class="logo-item"><img src="assets/companies/wipro.webp" alt="Wipro company logo - IT consulting partner" class="partner-logo" loading="lazy"/></div>
+              <div class="logo-item"><img src="assets/companies/Accenture.png" alt="Accenture company logo - Digital consulting partner" class="partner-logo" loading="lazy"/></div>
+              <div class="logo-item"><img src="assets/companies/tcs.jpeg" alt="TCS company logo - IT services partner" class="partner-logo" loading="lazy"/></div>
+              <div class="logo-item"><img src="assets/companies/capgemini.png" alt="Capgemini company logo - Technology consulting partner" class="partner-logo" loading="lazy"/></div>
+              <div class="logo-item"><img src="assets/companies/tech-mahindra.png" alt="Tech Mahindra company logo - IT solutions partner" class="partner-logo" loading="lazy"/></div>
+              <div class="logo-item"><img src="assets/companies/mphasis.png" alt="Mphasis company logo - Digital services partner" class="partner-logo" loading="lazy"/></div>
+              <div class="logo-item"><img src="assets/companies/microsoft-1024x1024.png" alt="Microsoft company logo - Technology platform partner" class="partner-logo" loading="lazy"/></div>
+              <div class="logo-item"><img src="assets/companies/aws-01-1024x1024.png" alt="AWS company logo - Cloud services partner" class="partner-logo" loading="lazy"/></div>
+              <div class="logo-item"><img src="assets/companies/hp.png" alt="HP company logo - Technology solutions partner" class="partner-logo" loading="lazy"/></div>
+              <div class="logo-item"><img src="assets/companies/hitachi.png" alt="Hitachi company logo - Technology innovation partner" class="partner-logo" loading="lazy"/></div>
+              <div class="logo-item"><img src="assets/companies/Blusafe_logo.webp" alt="Blusafe company logo - Technology security partner" class="partner-logo" loading="lazy"/></div>
                 </div>
             </div>
         </div>
@@ -287,7 +289,7 @@
               <p class="text-gray-300 max-w-xl leading-relaxed">
                 At Nivenza, we combine cutting‑edge engineering with creative problem
                 solving to deliver measurable impact. Our teams architect secure, scalable
-                solutions and ship with excellence.
+                solutions and ship with excellence. <a href="Company.html" class="text-blue-400 hover:text-blue-300">Learn more about our company</a>.
               </p>
             </div>
       
@@ -340,8 +342,9 @@
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-light tracking-tight mb-4">Our Services</h2>
           <p class="text-gray-400 font-light">Comprehensive Digital Solutions for Your Business</p>
-          <div class="mt-4">
+          <div class="mt-4 space-x-4">
             <a href="work.html" class="text-blue-400 hover:text-blue-300 text-sm">View Our Portfolio →</a>
+            <a href="getstart.html" class="text-blue-400 hover:text-blue-300 text-sm">Get Started Today →</a>
           </div>
         </div>
         <div class="flex items-center gap-3 mb-8">
@@ -415,55 +418,55 @@
           </h3>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="rounded-xl border border-gray-800 bg-white/5 p-4 hover:bg-white/10 transition card-hover cursor-pointer">
+          <a href="work.html#software-engineering" class="rounded-xl border border-gray-800 bg-white/5 p-4 hover:bg-white/10 transition card-hover cursor-pointer">
             <div class="h-12 w-12 rounded-xl border border-teal-500/20 bg-teal-400/10 flex items-center justify-center mb-4">
               <i class="fa-solid fa-code text-teal-300 text-xl" aria-hidden="true"></i>
             </div>
             <h3 class="text-lg font-medium mb-2">Software Engineering</h3>
             <p class="text-gray-400 text-sm">Robust web, API, and enterprise software built for scale.</p>
             <div class="mt-6 text-teal-300">→</div>
-          </div>
-          <div class="rounded-xl border border-gray-800 bg-white/5 p-4 hover:bg-white/10 transition card-hover cursor-pointer">
+          </a>
+          <a href="work.html#custom-software" class="rounded-xl border border-gray-800 bg-white/5 p-4 hover:bg-white/10 transition card-hover cursor-pointer">
             <div class="h-12 w-12 rounded-xl border border-teal-500/20 bg-teal-400/10 flex items-center justify-center mb-4">
               <i class="fa-solid fa-gears text-teal-300 text-xl" aria-hidden="true"></i>
             </div>
             <h3 class="text-lg font-medium mb-2">Custom Software Development</h3>
             <p class="text-gray-400 text-sm">Tailored applications and platforms aligned to your business.</p>
             <div class="mt-6 text-teal-300">→</div>
-          </div>
-          <div class="rounded-xl border border-gray-800 bg-white/5 p-4 hover:bg-white/10 transition card-hover cursor-pointer">
+          </a>
+          <a href="work.html#data-engineering" class="rounded-xl border border-gray-800 bg-white/5 p-4 hover:bg-white/10 transition card-hover cursor-pointer">
             <div class="h-12 w-12 rounded-xl border border-teal-500/20 bg-teal-400/10 flex items-center justify-center mb-4">
               <i class="fa-solid fa-database text-teal-300 text-xl" aria-hidden="true"></i>
             </div>
             <h3 class="text-lg font-medium mb-2">Data Engineering</h3>
             <p class="text-gray-400 text-sm">Pipelines, warehousing, and analytics-ready ETL/ELT.</p>
             <div class="mt-6 text-teal-300">→</div>
-          </div>
-          <div class="rounded-xl border border-gray-800 bg-white/5 p-4 hover:bg-white/10 transition card-hover cursor-pointer">
+          </a>
+          <a href="work.html#graphic-design" class="rounded-xl border border-gray-800 bg-white/5 p-4 hover:bg-white/10 transition card-hover cursor-pointer">
             <div class="h-12 w-12 rounded-xl border border-teal-500/20 bg-teal-400/10 flex items-center justify-center mb-4">
               <i class="fa-solid fa-palette text-teal-300 text-xl" aria-hidden="true"></i>
             </div>
             <h3 class="text-lg font-medium mb-2">Graphic Designing</h3>
             <p class="text-gray-400 text-sm">Brand visuals, UI assets, and production-ready creatives.</p>
             <div class="mt-6 text-teal-300">→</div>
-                </div>
+          </a>
           
-          <div class="rounded-xl border border-gray-800 bg-white/5 p-4 hover:bg-white/10 transition card-hover cursor-pointer">
+          <a href="work.html#mobile-development" class="rounded-xl border border-gray-800 bg-white/5 p-4 hover:bg-white/10 transition card-hover cursor-pointer">
             <div class="h-12 w-12 rounded-xl border border-teal-500/20 bg-teal-400/10 flex items-center justify-center mb-4">
               <i class="fa-solid fa-mobile-screen-button text-teal-300 text-xl" aria-hidden="true"></i>
             </div>
             <h3 class="text-lg font-medium mb-2">Mobile App Development</h3>
             <p class="text-gray-400 text-sm">Native and cross‑platform iOS/Android apps with great UX.</p>
             <div class="mt-6 text-teal-300">→</div>
-          </div>
-          <div class="rounded-xl border border-gray-800 bg-white/5 p-4 hover:bg-white/10 transition card-hover cursor-pointer">
+          </a>
+          <a href="work.html#ai-solutions" class="rounded-xl border border-gray-800 bg-white/5 p-4 hover:bg-white/10 transition card-hover cursor-pointer">
             <div class="h-12 w-12 rounded-xl border border-teal-500/20 bg-teal-400/10 flex items-center justify-center mb-4">
               <i class="fa-solid fa-brain text-teal-300 text-xl" aria-hidden="true"></i>
             </div>
             <h3 class="text-lg font-medium mb-2">AI Solutions & Development</h3>
             <p class="text-gray-400 text-sm">ML models, automation, and intelligent assistants for growth.</p>
             <div class="mt-6 text-teal-300">→</div>
-                        </div>
+          </a>
           
                         </div>
           
@@ -474,6 +477,9 @@
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-light tracking-tight mb-4">IT Staffing Solutions</h2>
           <p class="text-gray-400 font-light">Connect with top-tier tech talent to scale your development teams</p>
+          <div class="mt-4">
+            <a href="case-study.html" class="text-blue-400 hover:text-blue-300 text-sm">View Success Stories →</a>
+          </div>
         </div>
         <div class="flex items-center gap-3 mb-8">
           <span class="h-7 w-1.5 rounded bg-gradient-to-b from-blue-400 to-purple-400"></span>
