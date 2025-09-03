@@ -106,14 +106,10 @@
             </div>
         </nav>
 
-        <!-- Loading State -->
-        <div id="loading-state" class="container mx-auto px-6 pt-16 md:pt-24 text-center">
-            <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400"></div>
-            <p class="text-gray-400 mt-4 text-lg">Loading case study...</p>
-        </div>
+
 
         <!-- Case Study Content -->
-        <div id="case-study-content" class="hidden">
+        <div id="case-study-content">
             <!-- Hero Section -->
             <section class="container mx-auto px-6 pt-16 md:pt-24">
                 <!-- Mobile hero background (only on small screens) -->
@@ -336,9 +332,7 @@
         function displayCaseStudy() {
             if (!projectData) return;
             
-            // Hide loading, show content
-            document.getElementById('loading-state').classList.add('hidden');
-            document.getElementById('case-study-content').classList.remove('hidden');
+            // Update page title
             
             // Update page title
             document.title = `${projectData.title} - Case Study - Nivenza Connect`;
@@ -404,8 +398,8 @@
         
         // Show error message
         function showError(message) {
-            document.getElementById('loading-state').innerHTML = `
-                <div class="text-red-400">
+            document.getElementById('case-study-content').innerHTML = `
+                <div class="text-red-400 text-center py-16">
                     <i class="fas fa-exclamation-triangle text-4xl mb-4"></i>
                     <p class="text-lg">${message}</p>
                     <a href="work.html" class="mt-4 inline-block text-blue-400 hover:text-blue-300">← Back to Portfolio</a>
