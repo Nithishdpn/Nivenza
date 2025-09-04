@@ -1,0 +1,9 @@
+# Simple .htaccess for testing clean URLs
+RewriteEngine On
+
+# Test rule for Contact page
+RewriteRule ^Contact$ Contact.html [L]
+RewriteRule ^Company$ Company.html [L]
+RewriteRule ^work$ work.html [L]
+RewriteRule ^getstart$ getstart.html [L]
+RewriteRule ^case-study$ case-study.html [L]

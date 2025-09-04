@@ -1,4 +1,39 @@
-# Enable GZIP Compression
+# Hide .html extension from URLs
+# This file should be placed in your website's root directory
+
+# Enable URL rewriting
+RewriteEngine On
+
+# Handle specific pages first
+RewriteRule ^Contact/?$ Contact.html [L]
+RewriteRule ^Company/?$ Company.html [L]
+RewriteRule ^work/?$ work.html [L]
+RewriteRule ^getstart/?$ getstart.html [L]
+RewriteRule ^case-study/?$ case-study.html [L]
+
+# General rule for any other .html files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Redirect .html URLs to clean URLs (optional - for SEO)
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1? [NC,L,R=301]
+
+# Handle index.html specifically
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^$ index.html [L]
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Compression
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/plain
     AddOutputFilterByType DEFLATE text/html
@@ -11,60 +46,14 @@
     AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>
 
-# Browser Caching
+# Browser caching
 <IfModule mod_expires.c>
-    ExpiresActive On
+    ExpiresActive on
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
     ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/gif "access plus 1 year"
-    ExpiresByType image/png "access plus 1 year"
-    ExpiresByType image/webp "access plus 1 year"
-    ExpiresByType text/css "access plus 1 month"
-    ExpiresByType application/pdf "access plus 1 month"
-    ExpiresByType text/javascript "access plus 1 month"
-    ExpiresByType application/javascript "access plus 1 month"
-    ExpiresByType application/x-javascript "access plus 1 month"
-    ExpiresByType application/x-shockwave-flash "access plus 1 month"
-    ExpiresByType image/x-icon "access plus 1 year"
-    ExpiresByType font/woff "access plus 1 year"
-    ExpiresByType font/woff2 "access plus 1 year"
-    ExpiresByType font/ttf "access plus 1 year"
-    ExpiresByType font/eot "access plus 1 year"
-    ExpiresDefault "access plus 2 days"
+    ExpiresByType image/svg+xml "access plus 1 year"
 </IfModule>
-
-# Additional Cache Control Headers
-<IfModule mod_headers.c>
-    # Cache Control for static assets
-    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|webp)$">
-        Header set Cache-Control "public, max-age=31536000, immutable"
-    </FilesMatch>
-    
-    # Cache Control for HTML
-    <FilesMatch "\.(html|htm)$">
-        Header set Cache-Control "public, max-age=3600, must-revalidate"
-    </FilesMatch>
-    
-    # Enable Keep-Alive
-    Header set Connection keep-alive
-</IfModule>
-
-# Security Headers
-<IfModule mod_headers.c>
-    Header always set X-Content-Type-Options nosniff
-    Header always set X-Frame-Options DENY
-    Header always set X-XSS-Protection "1; mode=block"
-    Header always set Referrer-Policy "strict-origin-when-cross-origin"
-</IfModule>
-
-# Disable directory browsing
-Options -Indexes
-
-# Redirect www to non-www
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-
-# Force HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
