@@ -11,6 +11,15 @@ RewriteRule ^work/?$ work.html [L]
 RewriteRule ^getstart/?$ getstart.html [L]
 RewriteRule ^case-study/?$ case-study.html [L]
 
+# Marketing services pages
+RewriteRule ^marketing/mobile/?$ "marketing servies/mobile-marketing.html" [L]
+RewriteRule ^marketing/ppc/?$ "marketing servies/ppc-advertising.html" [L]
+RewriteRule ^marketing/social-media/?$ "marketing servies/social-media-marketing.html" [L]
+RewriteRule ^marketing/seo/?$ "marketing servies/seo-services.html" [L]
+RewriteRule ^marketing/content/?$ "marketing servies/content-marketing.html" [L]
+RewriteRule ^marketing/email/?$ "marketing servies/email-marketing.html" [L]
+RewriteRule ^marketing/performance/?$ "marketing servies/performance-database-marketing.html" [L]
+
 # General rule for any other .html files
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
