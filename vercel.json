@@ -23,6 +23,34 @@
     {
       "source": "/case-study",
       "destination": "/case-study.html"
+    },
+    {
+      "source": "/marketing/mobile",
+      "destination": "/marketing servies/mobile-marketing.html"
+    },
+    {
+      "source": "/marketing/ppc",
+      "destination": "/marketing servies/ppc-advertising.html"
+    },
+    {
+      "source": "/marketing/social-media",
+      "destination": "/marketing servies/social-media-marketing.html"
+    },
+    {
+      "source": "/marketing/seo",
+      "destination": "/marketing servies/seo-services.html"
+    },
+    {
+      "source": "/marketing/content",
+      "destination": "/marketing servies/content-marketing.html"
+    },
+    {
+      "source": "/marketing/email",
+      "destination": "/marketing servies/email-marketing.html"
+    },
+    {
+      "source": "/marketing/performance",
+      "destination": "/marketing servies/performance-database-marketing.html"
     }
   ],
   "redirects": [
@@ -54,6 +82,41 @@
     {
       "source": "/case-study.html",
       "destination": "/case-study",
+      "permanent": true
+    },
+    {
+      "source": "/marketing servies/mobile-marketing.html",
+      "destination": "/marketing/mobile",
+      "permanent": true
+    },
+    {
+      "source": "/marketing servies/ppc-advertising.html",
+      "destination": "/marketing/ppc",
+      "permanent": true
+    },
+    {
+      "source": "/marketing servies/social-media-marketing.html",
+      "destination": "/marketing/social-media",
+      "permanent": true
+    },
+    {
+      "source": "/marketing servies/seo-services.html",
+      "destination": "/marketing/seo",
+      "permanent": true
+    },
+    {
+      "source": "/marketing servies/content-marketing.html",
+      "destination": "/marketing/content",
+      "permanent": true
+    },
+    {
+      "source": "/marketing servies/email-marketing.html",
+      "destination": "/marketing/email",
+      "permanent": true
+    },
+    {
+      "source": "/marketing servies/performance-database-marketing.html",
+      "destination": "/marketing/performance",
       "permanent": true
     }
   ],
