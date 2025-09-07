@@ -51,6 +51,30 @@
     {
       "source": "/marketing/performance",
       "destination": "/marketing servies/performance-database-marketing.html"
+    },
+    {
+      "source": "/technology/mobile-app-development",
+      "destination": "/technology services/mobile-app-development.html"
+    },
+    {
+      "source": "/technology/ai-solutions-development",
+      "destination": "/technology services/ai-solutions-development.html"
+    },
+    {
+      "source": "/technology/custom-software-development",
+      "destination": "/technology services/custom-software-development.html"
+    },
+    {
+      "source": "/technology/data-engineering",
+      "destination": "/technology services/data-engineering.html"
+    },
+    {
+      "source": "/technology/graphic-designing",
+      "destination": "/technology services/graphic-designing.html"
+    },
+    {
+      "source": "/technology/software-engineering",
+      "destination": "/technology services/software-engineering.html"
     }
   ],
   "redirects": [
@@ -117,6 +141,36 @@
     {
       "source": "/marketing servies/performance-database-marketing.html",
       "destination": "/marketing/performance",
+      "permanent": true
+    },
+    {
+      "source": "/technology services/mobile-app-development.html",
+      "destination": "/technology/mobile-app-development",
+      "permanent": true
+    },
+    {
+      "source": "/technology services/ai-solutions-development.html",
+      "destination": "/technology/ai-solutions-development",
+      "permanent": true
+    },
+    {
+      "source": "/technology services/custom-software-development.html",
+      "destination": "/technology/custom-software-development",
+      "permanent": true
+    },
+    {
+      "source": "/technology services/data-engineering.html",
+      "destination": "/technology/data-engineering",
+      "permanent": true
+    },
+    {
+      "source": "/technology services/graphic-designing.html",
+      "destination": "/technology/graphic-designing",
+      "permanent": true
+    },
+    {
+      "source": "/technology services/software-engineering.html",
+      "destination": "/technology/software-engineering",
       "permanent": true
     }
   ],
