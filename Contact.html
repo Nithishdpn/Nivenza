@@ -200,12 +200,12 @@
                    <div class="border-white/10 border-r pt-4 sm:pt-6 pr-4 sm:pr-6 pb-4 sm:pb-6 pl-4 sm:pl-6 text-white">
                     <h2 class="text-lg font-semibold mb-4">Our Clients</h2>
                     <div class="grid grid-cols-3 gap-4 mb-6">
-                      <img src="/assets/clients_contact/1.png" class="h-10" alt=" />
+                      <img src="/assets/clients_contact/1.png" class="h-10" alt=" "/>
                       <img src="/assets/clients_contact/2.png" class="h-10" alt="" />
                       <img src="/assets/clients_contact/3.png" class="h-10" alt="" />
                       <img src="/assets/clients_contact/4.png" class="h-10" alt="" />
                       <img src="/assets/clients_contact/5.png" class="h-10" alt="" />
-                      <img src="/assets/clients_contact/6.png" class="h-10" alt=" />
+                      <img src="/assets/clients_contact/6.png" class="h-10" alt=" "/>
                       <img src="/assets/clients_contact/7.png" class="h-10" alt="" />
                       <img src="/assets/clients_contact/8.png" class="h-10" alt="" />
                       <img src="/assets/clients_contact/9.png" class="h-10" alt="" />
@@ -225,29 +225,29 @@
 <div class="p-4 sm:p-6 md:p-8 bg-gradient-to-br from-gray-900/70 to-black/60">
   <h2 class="text-xl sm:text-2xl font-semibold text-white mb-4 sm:mb-6">We Are Happy to Help You!</h2>
 
-  <form class="space-y-4 sm:space-y-6">
+  <form class="space-y-4 sm:space-y-6" id="contactForm">
     <!-- Name Row -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-      <input type="text" placeholder="First Name*" 
+      <input type="text" placeholder="First Name*" id="Fname" name="Fname"
         class="w-full rounded-lg border border-gray-700 bg-gray-800/50 text-white px-3 sm:px-4 py-2 sm:py-3 placeholder-gray-400 
                focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm sm:text-base" required>
-      <input type="text" placeholder="Last Name" 
+      <input type="text" placeholder="Last Name" id="Lname" name="Lname"
         class="w-full rounded-lg border border-gray-700 bg-gray-800/50 text-white px-3 sm:px-4 py-2 sm:py-3 placeholder-gray-400 
                focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm sm:text-base">
     </div>
 
     <!-- Email / Phone -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-      <input type="email" placeholder="Email*" 
+      <input type="email" placeholder="Email*" id="email" name="email"
         class="w-full rounded-lg border border-gray-700 bg-gray-800/50 text-white px-3 sm:px-4 py-2 sm:py-3 placeholder-gray-400 
                focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm sm:text-base" required>
-      <input type="tel" placeholder="Phone Number*" 
+      <input type="tel" placeholder="Phone Number*" id="phone" name="phone"
         class="w-full rounded-lg border border-gray-700 bg-gray-800/50 text-white px-3 sm:px-4 py-2 sm:py-3 placeholder-gray-400 
                focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all text-sm sm:text-base" required>
     </div>
 
     <!-- Message -->
-    <textarea rows="3" placeholder="Tell Us More" 
+    <textarea rows="3" placeholder="Tell Us More" id="message" name="message"
       class="w-full rounded-lg border border-gray-700 bg-gray-800/50 text-white px-3 sm:px-4 py-2 sm:py-3 placeholder-gray-400 
              focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all resize-none text-sm sm:text-base"></textarea>
 
@@ -258,6 +258,7 @@
       Send Enquiry →
     </button>
   </form>
+   <p id="response"></p>
 </div>
 
               
@@ -318,6 +319,38 @@
              </div>
            </div>
          </footer>
+          <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzhCdnB14esie7piEeppj1ctMP9kvwTLJGDutlW35QrTV0ukFxIbgyNF1uyJx1EeLV2wA/exec'; // Replace with your Apps Script Web App URL
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = {
+        Fname: document.getElementById('Fname').value,
+        Lname: document.getElementById('Lname').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        message: document.getElementById('message').value
+      };
+
+      fetch(scriptURL, {
+        method: 'POST',
+        body: JSON.stringify(data)
+      })
+      .then(response => response.text())
+        .then(result => {
+  document.getElementById('response').textContent = "Our team will get back to you with in 24 hours.";
+  document.getElementById('response').style.color = "#22c55e";
+  document.getElementById('contactForm').reset();
+        })
+        .catch(error => {
+        alert("Error submitting form.");
+        console.error('Error!', error.message);
+        });
+        });
+
+
+
+</script>
 
         <script>
           // Icons
