@@ -466,9 +466,9 @@
             
             projectsGrid.innerHTML = projectsData.map(project => `
                 <div class="work-card rounded-xl border border-gray-800 bg-white/5 overflow-hidden">
-                    <div class="h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden">
-                        ${project.image ? `<img src="${project.image}" alt="${project.title}" class="absolute inset-0 w-full h-full object-cover opacity-20">` : ''}
-                        <i class="${project.icon} text-4xl ${project.iconColor} relative z-10"></i>
+                    <div class="h-48 flex items-center justify-center relative overflow-hidden">
+                        ${project.image ? `<img src="${project.image}" alt="${project.title}" class="absolute inset-0 w-full h-full object-cover">` : ''}
+                        <div class="absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-30"></div>
                     </div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-3">
