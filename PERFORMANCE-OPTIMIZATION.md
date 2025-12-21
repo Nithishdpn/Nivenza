@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
 ### **Create service-worker.js:**
 
 ```javascript
-const CACHE_NAME = 'nivenza-v1';
+const CACHE_NAME = 'pjn-technologies-v1';
 const urlsToCache = [
     '/',
     '/css/main.css',

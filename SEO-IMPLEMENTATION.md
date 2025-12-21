@@ -1,7 +1,7 @@
-# Nivenza Website SEO Implementation Guide
+# PJN Technologies Website SEO Implementation Guide
 
 ## Overview
-This document outlines the comprehensive SEO optimization implemented across all pages of the Nivenza website to achieve top-notch search engine rankings and user experience.
+This document outlines the comprehensive SEO optimization implemented across all pages of the PJN Technologies website to achieve top-notch search engine rankings and user experience.
 
 ## 🚀 SEO Features Implemented
 
@@ -215,6 +215,6 @@ This document outlines the comprehensive SEO optimization implemented across all
 
 **Last Updated**: December 19, 2024
 **Version**: 1.0
-**Maintained By**: Nivenza Development Team
+**Maintained By**: PJN Technologies Development Team
 
 For questions or support regarding SEO implementation, please contact the development team.

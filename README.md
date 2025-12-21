@@ -1,4 +1,4 @@
-# Nivenza Connect - Dynamic Work Portfolio
+# PJN Technologies Connect - Dynamic Work Portfolio
 
 This project demonstrates how to create a dynamic portfolio website using only frontend technologies. The work page fetches project data from a JSON file and displays it dynamically, with interactive case study modals.
 
