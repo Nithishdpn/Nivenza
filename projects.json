@@ -29,8 +29,69 @@
         "teamSize": "4 developers",
         "client": "Fergus James"
       }
-    }
+    },
     
+
+    {
+  "id": 2,
+  "title": "Tantraa Events",
+  "category": "Event Management",
+  "technology": "WordPress",
+  "year": "2009",
+  "description": "Tantraa is a corporate event management company in India that creates elevated and unforgettable brand experiences, delivering creative and strategic execution for events including exhibitions, summits, awards, product launches, and experiential spaces.",
+  "image": "assets/work_img/tantraa.png",
+  "url": "https://www.tantraa.net/",
+  "icon": "fas fa-calendar-check",
+  "gradient": "from-red-400/20 to-orange-400/20",
+  "iconColor": "text-red-500",
+  "tagColor": "bg-red-400/20 text-red-500",
+  "caseStudy": {
+    "overview": "Tantraa specializes in corporate and experiential event management, blending creativity, innovation, and meticulous planning to bring brand stories to life across India and beyond.",
+    "challenge": "To build memorable brand experiences that stand out in a competitive event management industry, requiring high creativity, flawless execution and strong client relationships.",
+    "solution": "Delivered bespoke event management services including conceptualization, experiential design, execution, logistics and strategic planning for various high-profile events. Integrated sustainability (ESG) approaches in planning where possible.",
+    "technologies": ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript"],
+    "results": [
+      "Successfully executed major events like NLC Bharat, Myntra Creators Fest, and Volvo C40 Mega Launch",
+      "Delivered immersive brand experiences with high client satisfaction",
+      "Developed long-term partnerships with repeat corporate clients",
+      "Enhanced visibility and recognition in the Indian event management industry"
+    ],
+    "duration": "2 Months",
+    "teamSize": "2 developers",
+    "client": "Various brands and institutions"
+  }
+},
+{
+  "id": 3,
+  "title": "Karunya Ram Official",
+  "category": "Personal Brand / Portfolio",
+  "technology": "Static site",
+  "year": "2025",
+  "description": "Official portfolio and professional website of Karunya Ram — Indian actress, entrepreneur, creative leader and motivational speaker showcasing her journey, media, services, and social initiatives.",
+  "image": "assets/work_img/karunya ram.png",
+  "url": "https://www.karunyaram.com/",
+  "icon": "fas fa-user-circle",
+  "gradient": "from-purple-400/20 to-red-400/20",
+  "iconColor": "text-purple-500",
+  "tagColor": "bg-purple-400/20 text-purple-500",
+  "caseStudy": {
+    "overview": "Karunya Ram is a multifaceted Indian actress and entrepreneur who leverages her creative and leadership skills to inspire audiences through cinema, community initiatives, motivational talks, and brand collaborations. Her website highlights her journey, media presence, bookings, blogs, and contact information.",
+    "challenge": "To present a strong personal brand image online that communicates Karunya’s diverse talents — from acting to social impact work — while enabling fans and collaborators to connect and book her services seamlessly.",
+    "solution": "Developed a professional portfolio website featuring sections like Journey, Media, Manifest, Blogs, Booking, and Contact to build credibility, support brand partnerships, and engage audiences with a compelling narrative of influence and empowerment.",
+    "technologies": ["HTML5", "CSS3", "JavaScript"],
+    "results": [
+      "Built an authoritative online presence for Karunya Ram",
+      "Enabled brand endorsements and event bookings",
+      "Showcased multimedia content and motivational resources",
+      "Facilitated community outreach and audience engagement"
+    ],
+    "duration": "1 Week",
+    "teamSize": "1 developer",
+    "client": "Karunya Ram"
+  }
+}
+
+
     
   ]
 }
