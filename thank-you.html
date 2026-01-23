@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - PJN Technologies</title>
+    <link rel="icon" type="image/png" href="assets/logo4.png">
+    <link rel="apple-touch-icon" href="assets/logo4.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-ML6HPB84');</script>
+    <!-- End Google Tag Manager -->
+
+    <style>
+        @keyframes checkmark {
+            0% {
+                stroke-dashoffset: 100;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .checkmark-circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            animation: checkmark 0.6s ease-in-out 0.2s forwards;
+        }
+
+        .checkmark-check {
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: checkmark 0.3s ease-in-out 0.8s forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white min-h-screen flex items-center justify-center p-4">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ML6HPB84" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="text-center max-w-2xl mx-auto">
+        <!-- Animated Success Icon -->
+        <div class="mb-8 flex justify-center">
+            <svg class="w-32 h-32" viewBox="0 0 52 52">
+                <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" stroke="#22c55e" stroke-width="2" />
+                <path class="checkmark-check" fill="none" stroke="#22c55e" stroke-width="2"
+                    d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </svg>
+        </div>
+
+        <!-- Thank You Message -->
+        <h1
+            class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            Thank You!
+        </h1>
+
+        <p class="text-xl text-gray-300 mb-3">
+            We've received your message successfully.
+        </p>
+
+        <p class="text-gray-400 mb-6">
+            ✉️ A confirmation email has been sent to your inbox.
+        </p>
+
+        <!-- What's Next Section -->
+        <div class="bg-gray-900/50 border border-gray-800 rounded-xl p-6 mb-8 backdrop-blur-sm">
+            <h2 class="text-lg font-semibold mb-4 text-white">What Happens Next?</h2>
+            <div class="space-y-3 text-left">
+                <div class="flex items-start gap-3">
+                    <span class="text-blue-400 text-xl">1️⃣</span>
+                    <p class="text-gray-300 text-sm">Our team reviews your inquiry</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <span class="text-blue-400 text-xl">2️⃣</span>
+                    <p class="text-gray-300 text-sm">We'll respond within 24 hours during business hours</p>
+                </div>
+                <div class="flex items-start gap-3">
+                    <span class="text-blue-400 text-xl">3️⃣</span>
+                    <p class="text-gray-300 text-sm">We'll discuss your project requirements in detail</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a href="index.html"
+                class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 font-medium">
+                ← Back to Home
+            </a>
+            <a href="work.html"
+                class="inline-block bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-lg transition-all duration-300 border border-gray-700 hover:border-gray-600 font-medium">
+                View Our Work →
+            </a>
+        </div>
+
+        <!-- Explore More Links -->
+        <div class="text-gray-500 text-sm space-y-2">
+            <p>In the meantime, explore more:</p>
+            <div class="flex flex-wrap justify-center gap-4 text-blue-400">
+                <a href="case-study.html" class="hover:text-blue-300 transition-colors">📊 Case Studies</a>
+                <a href="Company.html" class="hover:text-blue-300 transition-colors">🏢 About Us</a>
+                <a href="getstart.html" class="hover:text-blue-300 transition-colors">🚀 Get Started</a>
+            </div>
+        </div>
+
+        <!-- Auto-redirect Countdown -->
+        <p class="text-gray-600 text-xs mt-8">
+            Redirecting to homepage in <span id="countdown" class="text-blue-400 font-semibold">10</span> seconds...
+        </p>
+    </div>
+
+    <script>
+        // Auto-redirect countdown
+        let seconds = 10;
+        const countdownEl = document.getElementById('countdown');
+
+        const interval = setInterval(() => {
+            seconds--;
+            countdownEl.textContent = seconds;
+
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+
+        // Update year in footer if needed
+        const yearEl = document.getElementById('year');
+        if (yearEl) {
+            yearEl.textContent = new Date().getFullYear();
+        }
+    </script>
+</body>
+
+</html>
