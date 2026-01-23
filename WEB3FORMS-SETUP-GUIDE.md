@@ -20,6 +20,17 @@
 
 ---
 
+## ⚠️ **CRITICAL: Why are emails not arriving?**
+
+If the "Thank You" page appears but you don't see the email:
+
+1. **Check Spam Folder:** Often the first email goes to Spam. Mark it as "Not Spam".
+2. **Key Activation:** You **MUST** click the activation link in the verification email Web3Forms sent you when you got your access key. If you didn't click it, the form won't send emails.
+3. **Auto-Reply (Autoresponse):** Note that the **Auto-Reply to Customer** feature is a **PRO feature** on Web3Forms. If you are on the free plan, the customer will NOT receive the auto-reply email, even if the code is there.
+4. **Resend Activation:** If you can't find the email, try getting a new key from https://web3forms.com/.
+
+---
+
 ## 🚀 Setup Instructions (5 Minutes)
 
 ### **Step 1: Get Your Free Web3Forms Access Key**
