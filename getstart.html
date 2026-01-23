@@ -172,7 +172,8 @@
 
   <!-- Navigation Bar -->
   <div class="content-container">
-    <nav class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-md md:bg-transparent md:backdrop-blur-md">
+    <nav id="site-header"
+      class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-md md:bg-transparent md:backdrop-blur-md">
       <div class="container mx-auto px-4 sm:px-6 py-6 md:py-12">
         <div class="flex items-center justify-between">
 
@@ -479,8 +480,17 @@ PJN Technologies Team
       submitBtn.disabled = true;
 
       try {
-        // Use EmailJS to send the form
-        const response = await emailjs.sendForm('service_b7lrd3s', 'template_x929zl6', form);
+        // Prepare parameters to match your EmailJS Template exactly
+        const templateParams = {
+          name: document.getElementById('Fname').value + " " + document.getElementById('Lname').value,
+          email: document.getElementById('email').value,
+          user_phone: document.getElementById('phone').value,
+          message: document.getElementById('message').value,
+          title: "Get Started Submission" // This fills the {{title}} in your template
+        };
+
+        // Use EmailJS to send the form with explicit parameters
+        const response = await emailjs.send('service_b7lrd3s', 'template_x929zl6', templateParams, 'CNXjW657ySeJYaTlV');
 
         if (response.status === 200) {
           // Success - redirect to thank you page
@@ -489,16 +499,16 @@ PJN Technologies Team
           // Error handling
           const responseEl = document.getElementById('response');
           if (responseEl) {
-            responseEl.textContent = "Something went wrong. Please try again.";
+            responseEl.textContent = "Error: " + response.text;
             responseEl.style.color = "#ef4444";
           }
         }
 
       } catch (error) {
-        // Network or other error
+        // Detailed error for debugging
         const responseEl = document.getElementById('response');
         if (responseEl) {
-          responseEl.textContent = "Failed to send message. Please check your connection.";
+          responseEl.textContent = "Error: " + (error.text || error.message || "Failed to send message");
           responseEl.style.color = "#ef4444";
         }
         console.error("EmailJS Error:", error);
@@ -533,16 +543,18 @@ PJN Technologies Team
     // Header hide on scroll
     const header = document.getElementById('site-header');
     let lastY = window.pageYOffset;
-    window.addEventListener(
-      'scroll',
-      () => {
-        const y = window.pageYOffset;
-        if (y > lastY && y > 80) header.classList.add('-translate-y-full');
-        else header.classList.remove('-translate-y-full');
-        lastY = y;
-      },
-      { passive: true }
-    );
+    if (header) {
+      window.addEventListener(
+        'scroll',
+        () => {
+          const y = window.pageYOffset;
+          if (y > lastY && y > 80) header.classList.add('-translate-y-full');
+          else header.classList.remove('-translate-y-full');
+          lastY = y;
+        },
+        { passive: true }
+      );
+    }
 
     // Smooth scroll
     function smoothScrollTo(targetId) {
