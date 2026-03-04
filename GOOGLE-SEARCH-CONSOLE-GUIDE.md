@@ -66,16 +66,17 @@ Once verified:
 
 ### **Step 4: Request Indexing for Main Pages**
 
-Request indexing for each important page:
+Request indexing for each important page to "force" Google to see the new Clean URLs immediately:
 
 1. Click **"URL Inspection"** in the left sidebar
 2. Enter the URL (one at a time):
    - `https://pjntech.com/`
-   - `https://pjntech.com/Company.html`
-   - `https://pjntech.com/work.html`
-   - `https://pjntech.com/Contact.html`
-   - `https://pjntech.com/getstart.html`
-   - `https://pjntech.com/case-study.html`
+   - `https://pjntech.com/Company`
+   - `https://pjntech.com/work`
+   - `https://pjntech.com/Contact`
+   - `https://pjntech.com/getstart`
+   - `https://pjntech.com/case-study`
+   - `https://pjntech.com/thank-you`
 
 3. For each URL:
    - Click **"Request Indexing"**
@@ -97,9 +98,10 @@ Request indexing for each important page:
    - ❌ Errors (fix immediately)
 
 3. Expected results:
-   - **Organization**: 2 valid items
+   - **Organization**: 2 valid items (Clean URLs)
    - **Review snippets**: 1 valid item
-   - **BreadcrumbList**: 5 valid items (one for each page)
+   - **BreadcrumbList**: 5+ valid items (All using Clean URLs)
+   - **SiteNavigationElement**: Should show valid items pointing to clean slugs.
 
 ---
 
