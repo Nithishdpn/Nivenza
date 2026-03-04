@@ -29,8 +29,8 @@ Allow: /marketing%20servies/
 
 # Allow all main pages
 Allow: /index.html
-Allow: /work.html
-Allow: /Company.html
-Allow: /Contact.html
-Allow: /getstart.html
-Allow: /case-study.html
+Allow: /Company
+Allow: /work
+Allow: /Contact
+Allow: /getstart
+Allow: /case-study

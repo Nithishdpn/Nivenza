@@ -107,7 +107,7 @@ Here's the complete implementation:
   <input type="hidden" name="autoresponse" value="Thank you for contacting PJN Technologies! We have received your message and will get back to you within 24 hours. Our team is excited to discuss your project.">
   
   <!-- Redirect after submission -->
-  <input type="hidden" name="redirect" value="https://pjntech.com/thank-you.html">
+  <input type="hidden" name="redirect" value="https://pjntech.com/thank-you">
   
   <!-- Form Fields -->
   <div class="form-group">
@@ -146,7 +146,7 @@ Here's the complete implementation:
 
 #### **Step 3: Create Thank You Page**
 
-Create `thank-you.html`:
+Create `thank-you`:
 
 ```html
 <!DOCTYPE html>
@@ -178,10 +178,10 @@ Create `thank-you.html`:
     
     <!-- Call to Action -->
     <div class="space-x-4">
-      <a href="index.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors">
+      <a href="/" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors">
         Back to Home
       </a>
-      <a href="work.html" class="inline-block bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-lg transition-colors">
+      <a href="work" class="inline-block bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-lg transition-colors">
         View Our Work
       </a>
     </div>
@@ -263,7 +263,7 @@ If you want more control over email templates:
         alert('Thank you! We will contact you soon.');
         
         // Redirect to thank you page
-        window.location.href = 'thank-you.html';
+        window.location.href = 'thank-you';
         
       }, function(error) {
         // Error
@@ -329,7 +329,7 @@ https://pjntech.com
   <input type="hidden" name="_autoresponse" value="Thank you for contacting us! We'll get back to you soon.">
   
   <!-- Redirect after submission -->
-  <input type="hidden" name="_next" value="https://pjntech.com/thank-you.html">
+  <input type="hidden" name="_next" value="https://pjntech.com/thank-you">
   
   <button type="submit">Send</button>
 </form>
@@ -371,7 +371,7 @@ https://pjntech.com
 - [ ] Sign up at https://web3forms.com/
 - [ ] Get your Access Key from email
 - [ ] Update Contact.html form with Web3Forms code
-- [ ] Create thank-you.html page
+- [ ] Create thank-you page
 - [ ] Test the form with your email
 - [ ] Verify auto-reply email is received
 - [ ] Update getstart.html form (if needed)

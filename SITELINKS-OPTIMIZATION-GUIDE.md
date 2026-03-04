@@ -104,7 +104,7 @@ You've implemented all the critical schemas:
 **Best Practices:**
 
 ```html
-<!-- Good Example (Company.html) ✅ -->
+<!-- Good Example (/company) ✅ -->
 <title>About PJN Technologies - Our Company, Mission & Team</title>
 <meta name="description" content="Learn about PJN Technologies - A leading digital marketing and technology solutions company.">
 
@@ -128,12 +128,12 @@ You've implemented all the critical schemas:
 
 | Page | Current H1 | Recommended H1 |
 |------|-----------|----------------|
-| index.html | ✅ Has H1 | Keep as is |
-| Company.html | ✅ "About PJN Technologies" | Keep as is |
-| work.html | ✅ "Our Work" | Keep as is |
-| Contact.html | ❓ Check | "Contact PJN Technologies" |
-| getstart.html | ❓ Check | "Get Started with PJN Technologies" |
-| case-study.html | ❓ Check | "Case Studies & Success Stories" |
+| / | ✅ Has H1 | Keep as is |
+| /company | ✅ "About PJN Technologies" | Keep as is |
+| /work | ✅ "Our Work" | Keep as is |
+| /contact | ❓ Check | "Contact PJN Technologies" |
+| /get-started | ❓ Check | "Get Started with PJN Technologies" |
+| /case-studies | ❓ Check | "Case Studies & Success Stories" |
 
 **Action:** Verify each page has exactly ONE unique H1 tag.
 
@@ -149,15 +149,15 @@ You've implemented all the critical schemas:
 
 **Recommendations:**
 
-**Company.html:**
+**/company:**
 - ✅ Good content about company values, mission, team
 - Action: Ensure at least 400 words of unique text
 
-**work.html:**
+**/work:**
 - ✅ Portfolio showcase
 - Action: Add descriptions for each project (50-100 words each)
 
-**Contact.html:**
+**/contact:**
 - ⚠️ Likely just a form
 - Action: Add content about:
   - Why contact us
@@ -165,7 +165,7 @@ You've implemented all the critical schemas:
   - Response time
   - Office locations/hours
 
-**getstart.html:**
+**/get-started:**
 - ⚠️ Likely just a form
 - Action: Add content about:
   - Process overview
@@ -173,7 +173,7 @@ You've implemented all the critical schemas:
   - Timeline expectations
   - Benefits of getting started
 
-**case-study.html:**
+**/case-studies:**
 - ✅ Likely has case study content
 - Action: Ensure each case study has 300+ words
 
@@ -189,9 +189,9 @@ You've implemented all the critical schemas:
 
 ```html
 <!-- Example: In Company.html -->
-<p>We've delivered over <a href="work.html">50+ successful projects</a> 
-for clients worldwide. <a href="Contact.html">Contact us</a> to discuss 
-your project, or <a href="getstart.html">get started</a> today.</p>
+<p>We've delivered over <a href="work">50+ successful projects</a> 
+for clients worldwide. <a href="Contact">Contact us</a> to discuss 
+your project, or <a href="getstart">get started</a> today.</p>
 ```
 
 **b) Add "Related Pages" Section:**
@@ -201,9 +201,9 @@ your project, or <a href="getstart.html">get started</a> today.</p>
 <section class="related-pages">
   <h3>Related Pages</h3>
   <ul>
-    <li><a href="work.html">View Our Portfolio</a></li>
-    <li><a href="Company.html">About Our Company</a></li>
-    <li><a href="Contact.html">Get in Touch</a></li>
+    <li><a href="work">View Our Portfolio</a></li>
+    <li><a href="Company">About Our Company</a></li>
+    <li><a href="Contact">Get in Touch</a></li>
   </ul>
 </section>
 ```
@@ -295,16 +295,16 @@ your project, or <a href="getstart.html">get started</a> today.</p>
 <div class="cta-section">
   <h3>Ready to Get Started?</h3>
   <p>Let's discuss your project and deliver exceptional results.</p>
-  <a href="Contact.html" class="cta-button">Contact Us Today</a>
+  <a href="Contact" class="cta-button">Contact Us Today</a>
 </div>
 
 <!-- Add "You Might Also Like" Section -->
 <section class="related-content">
   <h3>You Might Also Like</h3>
   <div class="cards">
-    <a href="work.html">View Our Portfolio</a>
-    <a href="case-study.html">Read Success Stories</a>
-    <a href="getstart.html">Start Your Project</a>
+    <a href="work">View Our Portfolio</a>
+    <a href="case-study">Read Success Stories</a>
+    <a href="getstart">Start Your Project</a>
   </div>
 </section>
 ```
