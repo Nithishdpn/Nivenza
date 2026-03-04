@@ -1,4 +1,5 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     {
       "source": "/",
@@ -9,7 +10,7 @@
       "destination": "/Contact.html"
     },
     {
-      "source": "/Company", 
+      "source": "/Company",
       "destination": "/Company.html"
     },
     {
@@ -23,6 +24,10 @@
     {
       "source": "/case-study",
       "destination": "/case-study.html"
+    },
+    {
+      "source": "/thank-you",
+      "destination": "/thank-you.html"
     },
     {
       "source": "/marketing/mobile",
@@ -90,7 +95,7 @@
     },
     {
       "source": "/Company.html",
-      "destination": "/Company", 
+      "destination": "/Company",
       "permanent": true
     },
     {
@@ -106,6 +111,11 @@
     {
       "source": "/case-study.html",
       "destination": "/case-study",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you.html",
+      "destination": "/thank-you",
       "permanent": true
     },
     {
